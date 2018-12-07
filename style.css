@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+
+body{
+    background-color: #34495e;
+    height: 75vh;
+}
+.container {
+    position: absolute;
+    top: 60px;
+    left: 25%;
+    width: 50%;
+    height: 10%;
+}
+
+.search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background: #c0392b;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+  
+.search:hover {
+    cursor: pointer;
+}
+
+.search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all .5s;
+}
+
+.search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all .5s;
+}
+
+input {
+    font-family: 'Inconsolata', monospace;
+    font-size: 18px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #c0392b;
+    color: white;
+    text-shadow: 0 0 10px #c0392b;
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 #130f40, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    width: 70%;
+    opacity: 1;
+    cursor: text;
+}
+
+input:focus ~ .search {
+    right: -78%;
+    background: #151515;
+    z-index: 6;
+}
+
+input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 25px;
+}
+
+input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+}
+
+.navdots{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: space-between;
+    margin-top: 8%;
+    width: 120px;
+    height: 20px;
+}
+
+.navdots .button1 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #c0392b;
+    margin: 2px;
+    border: 3px #c0392b solid;
+    color: white;
+}
+
+.navdots .button1:hover{
+    height: 22px;
+    width: 22px;
+    color: black;
+    border-radius: 50%;
+}
+
+.navdots .button1[data-checked='true']{
+    height: 20px;
+    width: 20px;
+    color: black;
+    border-radius: 50%;
+    background: white;
+}
+
+.navdots .button2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #c0392b;
+    margin: 2px;
+    border: 3px #c0392b solid;
+    color: white;
+}
+
+.navdots .button2[data-checked='true']{
+    height: 20px;
+    width: 20px;
+    color: black;
+    border-radius: 50%;
+    background: white;
+} 
+
+.navdots .button2:hover{
+    height: 22px;
+    width: 22px;
+    color: black;
+    border-radius: 50%;
+}
+
+.navdots .button3 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #c0392b;
+    margin: 2px;
+    border: 3px #c0392b solid;
+    color: white;
+}
+
+.navdots .button3:hover{
+    height: 22px;
+    width: 22px;
+    color: black;
+    border-radius: 50%;
+}
+
+.navdots .button3[data-checked='true']{
+    height: 20px;
+    width: 20px;
+    color: black;
+    border-radius: 50%;
+    background: white;
+}
+
+.navdots .button4 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #c0392b;
+    margin: 2px;
+    border: 3px #c0392b solid;
+    color: white;
+}
+
+.navdots .button4:hover{
+    height: 22px;
+    width: 22px;
+    color: black;
+    border-radius: 50%;
+}
+
+.navdots .button4[data-checked='true']{
+    height: 20px;
+    width: 20px;
+    color: black;
+    border-radius: 50%;
+    background: white;
+}
+
+.cards{
+    width: 80%;
+    height: 400px;
+    margin-top: 200px;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes fadeInDown { 
+    0% {                
+        opacity: 0;
+        transform: translate3d(0px, -100%, 0px);
+    }
+    100% {            
+        opacity: 1;
+        transform: none;
+    }
+}
+  
+.card {
+    margin: 0 auto;
+    max-width: 250px;
+    height: 400px;
+    background-color: #34495e;
+    float: left;
+    border-radius: 10px;
+    border: 1px #c0392b solid;
+    box-shadow: 0 0 15px 0 #130f40, 0 20px 25px 0 rgba(0, 0, 0, 0.8);
+}
+
+.card[data-hidden = 'true']{
+    display: none;
+}
+
+a {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, sans-serif;  
+    top: 5px;
+    left: 0;
+    width: 100%;
+    color: #1dd1a1;
+    text-align: left;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: justify;
+}
+
+a:hover{
+    color: #c0392b;
+}
+
+img{
+    width: 100%;
+    height: 140px;
+    border-radius: 10px 10px 0 0;
+}
+
+.author{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.author .authorName{
+    color: #9b59b6;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, sans-serif; 
+    width: 100%; 
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.date{
+    text-align: center;
+    margin-top: 5px; 
+}
+
+.date .dateName{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, sans-serif; 
+    width: 100%; 
+    font-weight: bold;
+    margin-left: 5px;
+    color: #9b59b6;
+} 
+
+.counter{
+    text-align: center;
+    margin-top: 5px;  
+}
+
+.counter .counterName{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, sans-serif; 
+    width: 100%; 
+    font-weight: bold;
+    margin-left: 5px;
+    color: #9b59b6;
+}
+
+.divForDescription{
+    position: absolute;
+    text-align: justify;
+    margin-top: 15px; 
+    width: 250px;
+    overflow-x:hidden;
+}
+
+.divForDescription .description{
+    font-size: 17px;
+    font-family: 'Courier New', Courier, sans-serif;  
+    font-weight: bold;
+    color: #ecf0f1;
+}
